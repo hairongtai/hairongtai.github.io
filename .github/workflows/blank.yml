@@ -17,7 +17,7 @@ jobs:
     - name: Install and Build
       run: |
         npm install
-        npm run-script build
+        npm run build
      
     # react项目的FOLDER为build，vue项目改为dist   
     - name: Deploy
@@ -25,4 +25,4 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: build
+        FOLDER: dist
