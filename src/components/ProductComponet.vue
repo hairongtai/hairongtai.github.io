@@ -2,15 +2,26 @@
   <div>
     <div class="list">
       <div class="list-item" v-for="(item, key) in list" :key="key">
-        <img style="width: 100%;"
-          src="../assets/production.jpg" />
-        <div class="container" style="margin-top: 20px" >
+        <img style="width: 100%;" :src="item.src" />
+        <div class="container" style="margin-top: 20px">
           <h3>
-            How to Winterize Your Car
+            {{item.title}}
           </h3>
           <p>
-            Winter means bad weather, less sunlight, and poor road conditions. Luckily, a small amount of basic
-            maintenance and some quick inspections can get your car ready to drive through winter weather.
+            {{item.text}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="list-item" v-for="(item, key) in list" :key="key">
+        <img style="width: 100%;" :src="item.src" />
+        <div class="container" style="margin-top: 20px">
+          <h3>
+            {{item.title}}
+          </h3>
+          <p>
+            {{item.text}}
           </p>
         </div>
       </div>
@@ -19,11 +30,40 @@
 </template>
 
 <script>
+import img1 from "../assets/equipment/car1.jpg";
+import img2 from "../assets/equipment/car2.jpg";
+import img3 from "../assets/equipment/car3.jpg";
+import img4 from "../assets/equipment/car4.jpg";
 export default {
   name: "ProductComponet",
   data() {
     return {
-      list: [1, 2, 3],
+      list: [
+        {
+          src: img1,
+          title: "How to Winterize Your Car",
+          text: `Winter means bad weather, less sunlight, and poor road conditions. Luckily, a small amount of basic
+            maintenance and some quick inspections can get your car ready to drive through winter weather.  `,
+        },
+        {
+          src: img2,
+          title: "How to Winterize Your Car",
+          text: `Winter means bad weather, less sunlight, and poor road conditions. Luckily, a small amount of basic
+            maintenance and some quick inspections can get your car ready to drive through winter weather.  `,
+        },
+        {
+          src: img3,
+          title: "How to Winterize Your Car",
+          text: `Winter means bad weather, less sunlight, and poor road conditions. Luckily, a small amount of basic
+            maintenance and some quick inspections can get your car ready to drive through winter weather.  `,
+        },
+        {
+          src: img4,
+          title: "How to Winterize Your Car",
+          text: `Winter means bad weather, less sunlight, and poor road conditions. Luckily, a small amount of basic
+            maintenance and some quick inspections can get your car ready to drive through winter weather.  `,
+        },
+      ],
     };
   },
 };
@@ -49,6 +89,7 @@ export default {
 .list-item img {
   box-sizing: border-box;
   display: block;
+  height: 1020px;
 }
 .list-item h3 {
   text-align: center;

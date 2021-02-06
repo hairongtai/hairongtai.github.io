@@ -4,8 +4,6 @@
       <SvgComponent />
       <BannerComponent />
       <ProductComponet />
-      <ProductComponet />
-      <ProductComponet />
       <Equipment />
       <FooterComponent />
     </div>

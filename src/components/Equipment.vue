@@ -14,27 +14,30 @@
 </template>
 
 <script>
-import img from  '../assets/production.jpg'
+import img1 from  '../assets/equipment/car1.jpg'
+import img2 from  '../assets/equipment/car2.jpg'
+import img3 from  '../assets/equipment/car3.jpg'
+import img4 from  '../assets/equipment/car4.jpg'
 export default {
   name: "Equipment",
   data() {
     return {
       list: [
         {
-          src: img,
-          text: "ttt",
+          src: img1,
+          text: "driver",
         },
         {
-          src: img,
+          src: img2,
           text: "Brakes",
         },
         {
-          src: img,
-          text: "Brakes",
+          src: img3,
+          text: "engine",
         },
         {
-          src: img,
-          text: "Brakes",
+          src: img4,
+          text: "steering wheel",
         },
       ],
     };
@@ -48,6 +51,7 @@ export default {
 }
 .list-item {
   position: relative;
+  width: 1600px;
 }
 .equipment .list-item .content {
   position: absolute;
